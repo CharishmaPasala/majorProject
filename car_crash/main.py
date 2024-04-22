@@ -15,8 +15,8 @@ def main():
 def success():   
     if request.method == 'POST':   
         f = request.files['file'] 
-        f.save(r"C:\Users\srava\OneDrive\Documents\iitj\ProjectWork\car_crash\car_crash\input_files"+f.filename)  
-        out_response=ml_model.get_prediction(r"C:\Users\srava\OneDrive\Documents\iitj\ProjectWork\car_crash\car_crash\input_files"+f.filename) 
+        f.save(r"input_files"+f.filename)  
+        out_response=ml_model.get_prediction(r"input_files"+f.filename) 
 
         return render_template("Acknowledgement.html", name = out_response)  
          
