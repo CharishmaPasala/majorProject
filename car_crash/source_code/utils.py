@@ -3,9 +3,9 @@ import numpy as np
 
 class ML_model:
     def __init__(self):
-        self.ml_model=torch.load(r"C:\Users\srava\OneDrive\Documents\iitj\ProjectWork\car_crash\car_crash\support_file\resnet_carcrash_94.pth",map_location=torch.device('cpu'))
+        self.ml_model=torch.load(r"support_file\resnet_carcrash_94.pth",map_location=torch.device('cpu'))
         self.ml_model.eval()
-        with open(r'C:\Users\srava\OneDrive\Documents\iitj\ProjectWork\car_crash\car_crash\support_file\indtocat.pkl','rb') as f:
+        with open(r'support_file\indtocat.pkl','rb') as f:
             self.i2c=pickle.load(f)
 
 
